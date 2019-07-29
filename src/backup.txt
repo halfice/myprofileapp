@@ -1,0 +1,160 @@
+import React from 'react';
+
+import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import logo from './headerimage.png';
+import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import Icon from '@material-ui/core/Icon';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+/*function App() {
+
+
+  AOS.init();
+  return (
+    <div className="App">
+      <header className="App-header">
+       <h1>Well Come to My Profile</h1>
+      </header>
+
+      <div className="App"
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+    In this step you’ll install the Heroku Command Line Interface (CLI). You use the CLI to manage and scale your applications, provision add-ons, view your application logs, and run your application locally.
+  </div>
+  iiiiiiiiiiiiiiiiiiiii
+    </div>
+  );
+}
+*/
+
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: "Item One",
+      ShowSharePoint: true,
+      ShowDataScie: false,
+      ShowReact: false,
+    };
+    AOS.init();
+  }
+
+
+  componentWillReceiveProps() {
+    this.setState({ value: "Item One" });
+    AOS.refresh();
+  }
+
+  handleChange() {
+
+  }
+  showsp() {
+    alert("1");
+    this.setState({
+      ShowSharePoint: true,
+      ShowDataScie: false,
+      ShowReact: false
+    });
+  }
+
+  showds() {
+    alert("1");
+    this.setState({
+      ShowSharePoint: false,
+      ShowDataScie: true,
+      ShowReact: false
+    });
+  }
+
+  showsps() {
+    alert("1");
+    this.setState({
+      ShowSharePoint: false,
+      ShowDataScie: false,
+      ShowReact: true,
+    });
+  }
+  render() {
+    return (
+      <div>
+        <Container maxWidth="sm">
+          <div data-aos="fade-up">
+            <img src={logo} alt="Logo" />;
+
+        </div>
+
+          <div data-aos="flip-left">
+            <Typography variant="body2" color="textSecondary" align="center">
+              {'Navigate to my '}
+              <Link color="inherit" href="https://abdulazizfarooqi.wordpress.com/">
+                Blogs
+      </Link>
+              {' stream.'}
+            </Typography>
+
+
+          </div>
+
+
+          <div data-aos="flip-right">
+
+            <AppBar position="static">
+              <Tabs value="sd:" onClick={this.state.showsp} >
+                <Tab label="SharePoint" onClick={this.state.showsp} />
+                <Tab label="Data Science" onClick={this.state.showds} />
+                <Tab label="React" onClick={this.state.showsps} />
+
+              </Tabs>
+            </AppBar>
+
+            {this.state.ShowSharePoint ===true &&
+              <div >
+                <h1>SharePoint Twwets</h1>
+
+              </div>
+            }
+            {this.state.ShowDataScie === true &&
+              <div >
+                <h1>Data ScienceLinks Tweeets</h1>
+
+              </div>
+            }
+
+            {this.state.ShowReact ===true &&
+              <div >
+                <h1>React Stuff</h1>
+
+              </div>
+            }
+
+
+
+
+
+          </div>
+        </Container>
+
+      </div >
+
+
+    );
+  }
+}
+
+export default App;

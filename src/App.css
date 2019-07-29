@@ -8,6 +8,12 @@
   pointer-events: none;
 }
 
+.LinksCss{
+  padding-left: 3px;
+  padding:10px;
+  cursor: pointer;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,8 +25,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Applink {
+  color: #282c34;
 }
 
 @keyframes App-logo-spin {
