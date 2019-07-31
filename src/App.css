@@ -8,6 +8,15 @@
   pointer-events: none;
 }
 
+.PaddingDiv{
+  padding:10px;
+  margin:10px;
+}
+
+.divTexMiddle{
+  text-align: center;
+}
+
 .LinksCss{
   padding-left: 3px;
   padding:10px;

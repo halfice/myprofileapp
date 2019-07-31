@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import { styles } from './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import logo from './headerimage.png';
@@ -26,15 +27,28 @@ import Slider from '@material-ui/core/Slider';
 import Switch, { SwitchClassKey, SwitchProps } from '@material-ui/core/Switch';
 import machlinelogo from './machlinelogo.jpg'
 import nintexlogo from './nintexlogo.png'
-
+import { spacing } from '@material-ui/system';
 import nodelogo from './nodelogo.png'
 import flowlogo from './flowlogo.png'
 import bprocess from './bprocess.png'
 import pythonlogo from './pythonlogo.jpg'
+import TextField from '@material-ui/core/TextField';
+
+import adib from './logoadib.png'
+import adqcc from './qcc.png';
+import ubl from './ubl.png';
+import arabtec from './arabtec.png';
+import jeddah from './jeddahsoft.png';
+
+import nawras from './nawras.png';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+
+
 
 
 import { Cards } from './Cards';
-
+import { Experience } from './Experience';
 
 class App extends React.Component {
 
@@ -45,7 +59,7 @@ class App extends React.Component {
       ShowSharePoint: true,
       ShowDataScie: false,
       ShowReact: false,
-      Mysplogo:splogo
+      Mysplogo: splogo
     };
     AOS.init();
   }
@@ -101,17 +115,18 @@ class App extends React.Component {
             </Grid>
             <Grid item xs={8}>
               <div data-aos="fade-down">
-                <h3>Welcome to Abdul Aziz Farooqi - World</h3>
+                <h3>Welcome to Abdul Aziz Farooqi </h3>
                 <Typography>
-                  The API documentation of the Grid React component. Learn more about the props and the CSS customization points.
-
-              </Typography>
+                  <h4>SharePoint-Data Scientist Consultant</h4>
+                </Typography>
                 <Typography>
-                  The API documentation of the Grid React component. Learn more about the props and the CSS customization points.
-                  The API documentation of the Grid React component. Learn more about the props and the CSS customization points.
-                  The API documentation of the Grid React component. Learn more about the props and the CSS customization points. The API documentation of the Grid React component. Learn more about the props and the CSS customization points.
-
-              </Typography>
+                  <ul>
+                    <li>Automate Business Process - Workflows(K2, Nintex, SharePoint Designer Workflows</li>
+                    <li>Create/Develop Web Solution Digitally</li>
+                    <li>Design/Integrate Machine Learning model in existing web solutions</li>
+                    <li>Hands on Agile methogoloty with end to end Change Process</li>
+                  </ul>
+                </Typography>
 
               </div>
             </Grid>
@@ -140,123 +155,194 @@ class App extends React.Component {
 
             </AppBar>
 
-<Divider />
-</div>
- <div data-aos="fade-left">
-  <br></br>
-            <Grid container>    
-<Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={splogo}  headingofcard="SharePoint"/>
-             </Paper>
-           </Grid>
-           <Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={nintexlogo}  headingofcard="Machine Learning"/>
-             </Paper>
-           </Grid>
+            <Divider />
+          </div>
+          <div data-aos="fade-left">
+            <br></br>
+            <Grid container>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={splogo} headingofcard="SharePoint" />
+                </Paper>
+              </Grid>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={machlinelogo} headingofcard="Machine Learning" />
+                </Paper>
+              </Grid>
 
-           <Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={machlinelogo}  headingofcard="MS Flow / Nintex / K2 / SP "/>
-             </Paper>
-           </Grid>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={nintexlogo} headingofcard="MS Flow / Nintex / K2 / SP " />
+                </Paper>
+              </Grid>
 
 
-          
-           <Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={nodelogo}  headingofcard="Python"/>
-             </Paper>
-           </Grid>
 
-           <Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={flowlogo}  headingofcard="Neural Netoworks"/>
-             </Paper>
-           </Grid>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={nodelogo} headingofcard="Python" />
+                </Paper>
+              </Grid>
 
-           <Grid item xs={4}>
-             <Paper className={style.paper}>
-             <Cards imagelogo={bprocess}  headingofcard="Node/React/Angular"/>
-             </Paper>
-           </Grid>
-           </Grid>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={flowlogo} headingofcard="Neural Netoworks" />
+                </Paper>
+              </Grid>
+
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Cards imagelogo={bprocess} headingofcard="Node/React/Angular" />
+                </Paper>
+              </Grid>
+            </Grid>
 
           </div>
-        
+
 
 
           <Divider />
 
-          <div data-aos="fade-up-left">
-        
-       
-          <Paper className={style.paper}>
-             <h3>How do you visit internet?</h3>
-             <Slider
-          defaultValue={30}
-          aria-labelledby="discrete-slider"
-          valueLabelDisplay="auto"
-          step={10}
-          marks
-          min={10}
-          max={110}
-        />
-        
-        <Switch checked={true} value="checkedA" />
-             </Paper>
-
+          <div data-aos="fade-up-left PaddingDiv">
+<div className="PaddingDiv">
+          
+            <Paper className={style.paper}>
+            <div className="PaddingDiv">
+              <h3>Would you like to have this Digital format CV? Rate it and Submit</h3>
+              </div>
+              <div className="PaddingDiv">
+              <Slider
+                defaultValue={30}
+                aria-labelledby="discrete-slider"
+                valueLabelDisplay="auto"
+                step={10}
+                marks
+                min={10}
+                max={110}
+              />
+              </div>
+               <div className="PaddingDiv">
+              <TextField
+                id="standard-uncontrolled"
+                label="Email Address"
+                defaultValue="abc@emailaddress.com"
+                className={style.textField}
+                margin="normal"
+              />
+</div>
+              <br></br>
+              <div className="PaddingDiv">
+              <Button variant="contained" color="secondary" className={style.button}>
+                Submit
+      </Button>
       </div>
 
-
-      <div data-aos="fade-right">
-         
-         <Chip label="Basic Chip" className={style.chip} />
-         <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-      <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-      <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-      <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-      <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-      <Chip
-       avatar={<Avatar>MB</Avatar>}
-       label="Clickable Chip"
-       className={style.chip}
-     />
-
-<Paper className={style.paper}>
-            <Cards imagelogo={pythonlogo}  headingofcard="Node/React/Angular"/>
             </Paper>
-         </div>
+            </div>
+
+          </div>
+
+
+          <div data-aos="fade-right" className="PaddingDiv">
+         
+            <Paper className={style.paper}>
+            <div className="PaddingDiv">
+              <Chip label="Team Engagement" className={style.PaddingDiv} />
+              <Chip
+                avatar={<Avatar>TMQ</Avatar>}
+                label="Team Work / Quality"
+                className={style.chip}
+              />
+              <Chip
+                avatar={<Avatar>AM</Avatar>}
+                label="Agile Methogoloty"
+                className={style.chip}
+              />
+              <Chip
+                avatar={<Avatar>PM</Avatar>}
+                label="Project Management"
+                className={style.chip}
+              />
+              <Chip
+                avatar={<Avatar>PM</Avatar>}
+                label="Process Management"
+                className={style.chip}
+              />
+              <Chip
+                avatar={<Avatar>TVP</Avatar>}
+                label="Time value Project"
+                className={style.chip}
+              />
+              <Chip
+                avatar={<Avatar>WOW</Avatar>}
+                label="Wow factors"
+                className={style.chip}
+              />
+              </div>
+            </Paper>
+            <Paper className={style.paper}>
+              <Cards imagelogo={pythonlogo} headingofcard="Node/React/Angular" />
+            </Paper>
+            </div>
+         
+
+          <Divider />
+
+
+          <div data-aos="fade-left">
+            <br></br>
+            <Grid container>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={arabtec} headingofcard="Arabtec" projectlist="" />
+                </Paper>
+              </Grid>
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={adqcc} headingofcard="ADQCC" projectlist="" />
+                </Paper>
+              </Grid>
+
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={adib} headingofcard="ADIB" projectlist="" />
+                </Paper>
+              </Grid>
+
+
+
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={nawras} headingofcard="Nawras Telcom" projectlist="" />
+                </Paper>
+              </Grid>
+
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={ubl} headingofcard="UBL" projectlist="" />
+                </Paper>
+              </Grid>
+
+              <Grid item xs={4} m={3}>
+                <Paper className={style.paper}>
+                  <Experience imagelogo={jeddah} headingofcard="Jeddah Soft" projectlist="Web Site Automation / Proect Planning / SQL Database Migration  / Databse Management" />
+                </Paper>
+              </Grid>
+            </Grid>
+
+          </div>
+
+
         </Container>
 
-      
+
 
 
 
       </div >
 
-     
+
 
 
     );

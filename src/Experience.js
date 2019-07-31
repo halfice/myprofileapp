@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -10,6 +9,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { style } from '@material-ui/system';
 import splogo from './splogo.png'
+
+
+
 import './App.css';
 const useStyles = makeStyles(
     createStyles({
@@ -23,13 +25,14 @@ const useStyles = makeStyles(
 );
 
 
-export class Cards extends React.Component {
+export class Experience extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
           imagelogo: this.props.imagelogo,
           headingofcard:this.props.headingofcard,
+          projectList:this.props.projectlist,
         };
       }
     
@@ -48,10 +51,7 @@ export class Cards extends React.Component {
                             {this.props.headingofcard}
                   </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                           Hands on Experience on {this.props.headingofcard}. Work with ITIL/Togaf base Change Management Process
-                           Work with Team with Agil methodology.
-                           Optimize Project Delivery with Quality
-                           Adaptable and Innovative
+                        {this.props.projectList}
                   </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -59,7 +59,7 @@ export class Cards extends React.Component {
                     <Button size="small" color="primary">
                         Share
                 </Button>
-                    
+                  
                 </CardActions>
             </Card>
             
