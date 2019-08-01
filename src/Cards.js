@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { style } from '@material-ui/system';
 import splogo from './splogo.png'
+import { spacing } from '@material-ui/system';
 import './App.css';
 const useStyles = makeStyles(
     createStyles({
@@ -36,7 +37,7 @@ export class Cards extends React.Component {
 
     render() {
         return (
-            <Card className={style.card}>
+            <Card className={style.card}  m={15} p={10}>
                 <CardActionArea>
                     <CardMedia
                         className={style.media}
