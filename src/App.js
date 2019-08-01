@@ -109,7 +109,7 @@ class App extends React.Component {
           <Grid container>
             <Grid item xs={4}>
               <div data-aos="fade-up">
-                <img src={logo} alt="Logo" />;
+                <img src={logo} alt="Logo" />
 
         </div>
             </Grid>
@@ -117,12 +117,12 @@ class App extends React.Component {
               <div data-aos="fade-down">
                 <h3>Welcome to Abdul Aziz Farooqi </h3>
                 <Typography>
-                  <h4>SharePoint-Data Scientist Consultant</h4>
+                  <h4>SharePoint-Data Scientist Consultant (Full Stack Developer)</h4>
                 </Typography>
                 <Typography>
                   <ul>
                     <li>Automate Business Process - Workflows(K2, Nintex, SharePoint Designer Workflows</li>
-                    <li>Create/Develop Web Solution Digitally</li>
+                    <li>Create/Develop Web Solutions With Productivity</li>
                     <li>Design/Integrate Machine Learning model in existing web solutions</li>
                     <li>Hands on Agile methogoloty with end to end Change Process</li>
                   </ul>
@@ -136,11 +136,11 @@ class App extends React.Component {
 
           <div data-aos="flip-left">
             <Typography variant="body2" color="textSecondary" align="center">
-              {'Navigate to my '}
+            {'Email @:axix.szabist@gmail.com |'}  {'Navigate to my '}
               <Link color="inherit" href="https://abdulazizfarooqi.wordpress.com/">
-                Blogs
+              {' Blogs '}  
       </Link>
-              {' stream.'}
+              {' stream.'}{' | Contact # 0097-502868572'}
             </Typography>
 
 
